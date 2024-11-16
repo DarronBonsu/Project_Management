@@ -1,0 +1,198 @@
+/* General look of the whole page */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern text style */
+    background: #f9f9f9; /* Light background color */
+    line-height: 1.8; /* Comfortable space between lines */
+    margin: 0;
+    padding: 20px;
+    color: #333333; /* Dark text for better contrast */
+}
+
+/* Top bar and bottom bar look */
+#main-header nav{
+    background: #2e3b4e; /* Deep navy background for bars */
+    color: #ffffff; /* White text for contrast */
+    padding: 15px 10px; /* Slightly more padding */
+}
+
+/* Header design */
+#main-header ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; /* Evenly spaced items */
+    align-items: center; /* Center vertically */
+}
+
+#main-header ul li {
+    padding-top: 5px;
+    flex:1;
+    text-align: center;
+    font-size: 1.2rem; /* Smaller, refined text */
+}
+
+#main-header ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#main-header ul li a:hover{
+    color: #f08a5d; /* Vibrant coral color on hover */
+}
+
+#main-header ul li a.reactive {
+    color: #f08a5d;
+    text-decoration: underline;
+}
+
+/* Header titles */
+h1, h2, h3, h6 {
+    color: #2e3b4e;
+    font-weight: 700;
+}
+
+/* Content Boxes */
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* More spacing for cleaner look */
+    justify-content: space-evenly;
+    padding-bottom: 20px; /* More breathing room */
+}
+
+/* Box design */
+#left, #right {
+    flex-basis: 48%; 
+    background: #ffffff;
+    padding: 25px; 
+    margin-top: 20px;
+    border-radius: 15px; /* Larger rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Softer shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
+}
+
+#center {
+    flex-basis: calc(100% - 30px);
+    background: #ffffff;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for boxes */
+#left:hover, #right:hover, #center:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+}
+
+/* Input Group */
+.input-group {
+    flex-basis: 48%;
+}
+
+/* Input field styles */
+.input-group input[type='text'],
+.input-group input[type='email'],
+.input-group input[type='date'],
+.input-group input[type='password'],
+textarea {
+    width: 100%;
+    border: 2px solid #2e3b4e;
+    border-radius: 12px; /* Softer rounded edges */
+    padding: 12px;
+    font-size: 1.1rem;
+    background: #f4f4f4; /* Light grey background for inputs */
+    transition: border-color 0.3s ease;
+}
+
+/* Focused input styles */
+.input-group input[type='text']:focus,
+.input-group input[type='email']:focus,
+.input-group input[type='date']:focus,
+.input-group input[type='password']:focus,
+textarea:focus {
+    border-color: #f08a5d; /* Coral color for focus */
+    outline: none;
+    background: #ffffff; /* White background on focus */
+}
+
+/* Button design */
+button[type='submit'] {
+    background-color: #3fc1c9; /* Aqua background for buttons */
+    color: #ffffff;
+    padding: 14px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px; /* Pill-shaped buttons */
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effect */
+input[type='submit']:hover, button[type='submit']:focus {
+    background-color: #fc5185; /* Coral hover color */
+    transform: translateY(-3px); /* Lift on hover */
+}
+
+.button-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Table design */
+#myTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#myTable th {
+    background-color: #e3e4e8;
+    padding: 10px;
+    text-align: left;
+    font-size: 1rem;
+    color: #333;
+}
+
+#myTable td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#myTable tr:hover {
+    background-color: #3fc1c9;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media  (max-width: 768px) {
+    .boxes {
+        flex-direction: column;
+    }
+
+    #left, #right {
+        flex-basis: 100%;
+    }
+
+    #myTable td, #myTable th {
+        display: block;
+        text-align: center;
+    }
+
+    #main-header ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #main-header ul li {
+        margin: 8px 0;
+    }
+}
